@@ -4,7 +4,7 @@ A professional website for Rachel Siegel, MSW -- a therapist and coach specializ
 
 ## Table of Contents
 
-- [Tech Stack](#tech-stack)
+- [Tech Stack](#tech-stack) 
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Scripts](#scripts)
