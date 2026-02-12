@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+/*
+ * Brand Color Palette for Rachel Siegel, MSW
+ * ------------------------------------------
+ * Dark purple: primary brand color (CTAs, headings)
+ * Blue: secondary accent (links, supporting elements)
+ * Dark bluish-green (teal): nature-inspired accent
+ *
+ * Colors chosen to evoke calm, professionalism, and nature --
+ * inspired by eringrumley.com, laurenmaher.com, deborahhart.com.au
+ */
+
+:root {
+  /* Brand Colors */
+  --brand-purple: #4a2060;
+  --brand-purple-light: #6b3a8a;
+  --brand-purple-dark: #361848;
+  --brand-blue: #2c5282;
+  --brand-blue-light: #4a7ab5;
+  --brand-blue-dark: #1e3a5f;
+  --brand-teal: #1a535c;
+  --brand-teal-light: #2d7a86;
+  --brand-teal-dark: #0f3339;
+
+  /* Neutrals */
+  --neutral-50: #faf9fb;
+  --neutral-100: #f3f1f5;
+  --neutral-200: #e8e4ed;
+  --neutral-300: #d1cad9;
+  --neutral-400: #a89bb5;
+  --neutral-500: #7d6e8d;
+  --neutral-600: #5c4f69;
+  --neutral-700: #3d3548;
+  --neutral-800: #262030;
+  --neutral-900: #150f1d;
+
+  /* Semantic */
+  --background: var(--neutral-50);
+  --foreground: var(--neutral-900);
+  --muted: var(--neutral-100);
+  --muted-foreground: var(--neutral-500);
+  --border: var(--neutral-200);
+  --ring: var(--brand-purple);
+  --primary: var(--brand-purple);
+  --primary-foreground: #ffffff;
+  --secondary: var(--brand-blue);
+  --secondary-foreground: #ffffff;
+  --accent: var(--brand-teal);
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --card: #ffffff;
+  --card-foreground: var(--neutral-900);
+  --popover: #ffffff;
+  --popover-foreground: var(--neutral-900);
+  --input: var(--neutral-200);
+  --radius: 0.5rem;
+}
+
+@theme inline {
+  /* Brand colors as Tailwind utilities */
+  --color-brand-purple: var(--brand-purple);
+  --color-brand-purple-light: var(--brand-purple-light);
+  --color-brand-purple-dark: var(--brand-purple-dark);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-blue-light: var(--brand-blue-light);
+  --color-brand-blue-dark: var(--brand-blue-dark);
+  --color-brand-teal: var(--brand-teal);
+  --color-brand-teal-light: var(--brand-teal-light);
+  --color-brand-teal-dark: var(--brand-teal-dark);
+
+  /* Neutral scale */
+  --color-neutral-50: var(--neutral-50);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-900: var(--neutral-900);
+
+  /* Semantic color tokens for shadcn/ui compatibility */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-input: var(--input);
+
+  /* Typography */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-lora), Georgia, "Times New Roman", serif;
+
+  /* Border radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Base heading styles -- use the warm serif heading font */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
