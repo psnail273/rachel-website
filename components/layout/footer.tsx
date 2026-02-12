@@ -1,10 +1,19 @@
 import Link from "next/link";
 import { navItems } from "@/lib/navigation";
+import { LeafMotif } from "@/components/decorative/leaf-motif";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-brand-purple-dark text-neutral-200">
-      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+    <footer className="relative overflow-hidden border-t border-border bg-brand-purple-dark text-neutral-200">
+      {/* Stone motif — grounding accent */}
+      <LeafMotif
+        variant="stone"
+        className="absolute -right-8 top-4 hidden lg:block"
+        size={180}
+        opacity={0.03}
+      />
+
+      <div className="section-container-6xl relative py-10">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand / About */}
           <div>

@@ -103,11 +103,9 @@ export default function Contact() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-gradient-to-br from-neutral-50 via-brand-purple/5 to-brand-teal/10 px-4 pb-12 pt-16 sm:px-6 sm:pb-16 sm:pt-20 lg:px-8">
+      <section className="bg-linear-to-br from-neutral-50 via-brand-purple/5 to-brand-teal/10 px-4 pb-12 pt-16 sm:px-6 sm:pb-16 sm:pt-20 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-brand-purple sm:text-5xl">
-            Contact
-          </h1>
+          <h1 className="page-title">Contact</h1>
           <p className="mt-4 text-lg leading-relaxed text-neutral-600 sm:text-xl">
             I would love to hear from you. Reach out to schedule your free
             20-minute consultation or to ask any questions.
@@ -116,7 +114,14 @@ export default function Contact() {
       </section>
 
       {/* Contact Content */}
-      <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <section className="relative mx-auto max-w-5xl overflow-hidden px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+        {/* Willow motif — flexibility, emotional flow */}
+        <LeafMotif
+          variant="willow"
+          className="absolute -left-16 bottom-12 hidden lg:block"
+          size={280}
+          opacity={0.04}
+        />
         <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
           {/* Contact Form */}
           <div className="lg:col-span-3">

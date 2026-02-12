@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LeafMotif } from "@/components/decorative/leaf-motif";
+import { InstrumentMotif } from "@/components/decorative/instrument-motif";
 
 export const metadata: Metadata = {
   title: "Services | Rachel Siegel, MSW",
@@ -11,11 +12,9 @@ export default function Services() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-gradient-to-b from-brand-purple/5 to-transparent">
+      <section className="bg-linear-to-b from-brand-purple/5 to-transparent">
         <div className="mx-auto max-w-4xl px-4 pb-12 pt-16 sm:px-6 sm:pb-16 sm:pt-20 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight text-brand-purple sm:text-5xl">
-            Services
-          </h1>
+          <h1 className="page-title">Services</h1>
           <p className="mt-4 text-lg text-neutral-600 sm:text-xl">
             Therapy &amp; Coaching
           </p>
@@ -23,11 +22,9 @@ export default function Services() {
       </section>
 
       {/* Therapy Section */}
-      <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <h2 className="text-3xl font-semibold text-brand-purple sm:text-4xl">
-          Therapy
-        </h2>
-        <p className="mt-6 text-base leading-relaxed text-neutral-700 sm:text-lg sm:leading-relaxed">
+      <section className="section-container-4xl">
+        <h2 className="section-heading-3xl">Therapy</h2>
+        <p className="body-text-dark mt-6">
           I specialize in working with high achievers, performing artists, and
           individuals navigating anxiety, depression, burnout, and body image
           concerns.
@@ -51,14 +48,8 @@ export default function Services() {
                 "Work-life balance",
                 "Relationship issues/setting boundaries",
               ].map((item) => (
-                <li
-                  key={item}
-                  className="flex items-center gap-2 rounded-md px-2 py-1.5 transition-colors duration-200 hover:bg-neutral-50"
-                >
-                  <span
-                    aria-hidden="true"
-                    className="mt-1.5 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand-teal"
-                  />
+                <li key={item} className="list-item-hover">
+                  <span aria-hidden="true" className="bullet-dot" />
                   {item}
                 </li>
               ))}
@@ -83,14 +74,8 @@ export default function Services() {
                 "Explore identity outside of work/art/achievement",
                 "Create work/performances that have meaning and purpose",
               ].map((item) => (
-                <li
-                  key={item}
-                  className="flex items-center gap-2 rounded-md px-2 py-1.5 transition-colors duration-200 hover:bg-neutral-50"
-                >
-                  <span
-                    aria-hidden="true"
-                    className="mt-1.5 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand-teal"
-                  />
+                <li key={item} className="list-item-hover">
+                  <span aria-hidden="true" className="bullet-dot" />
                   {item}
                 </li>
               ))}
@@ -100,17 +85,23 @@ export default function Services() {
       </section>
 
       {/* Coaching Section */}
-      <section className="bg-neutral-50">
-        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-          <h2 className="text-3xl font-semibold text-brand-purple sm:text-4xl">
-            Coaching
-          </h2>
-          <p className="mt-6 text-base leading-relaxed text-neutral-700 sm:text-lg sm:leading-relaxed">
-            In addition to traditional talk therapy, I offer coaching sessions to
-            performing artists to address performance anxiety, perfectionism, and
-            developing a mission-driven career.
+      <section className="relative overflow-hidden bg-neutral-50">
+        {/* Piano motif — performing artist coaching */}
+        <InstrumentMotif
+          variant="piano"
+          className="absolute -left-16 bottom-8 hidden lg:block"
+          size={300}
+          opacity={0.04}
+        />
+
+        <div className="section-container-4xl relative">
+          <h2 className="section-heading-3xl">Coaching</h2>
+          <p className="body-text-dark mt-6">
+            In addition to traditional talk therapy, I offer coaching sessions
+            to performing artists to address performance anxiety, perfectionism,
+            and developing a mission-driven career.
           </p>
-          <p className="mt-4 text-base leading-relaxed text-neutral-700 sm:text-lg sm:leading-relaxed">
+          <p className="body-text-dark mt-4">
             In these sessions, I draw from ACT (Acceptance and Commitment
             Therapy) and CFT (Compassion Focused Therapy) to help performers
             learn about stage fright, and create performances that have meaning
@@ -129,14 +120,12 @@ export default function Services() {
           opacity={0.05}
         />
 
-        <div className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-          <h2 className="text-3xl font-semibold text-brand-purple sm:text-4xl">
-            About Perfectionism
-          </h2>
-          <p className="mt-6 text-base leading-relaxed text-neutral-700 sm:text-lg sm:leading-relaxed">
-            Contrary to common belief, perfectionism doesn&rsquo;t help us achieve
-            our goals. It keeps us small, distracted by the fear of making a
-            mistake or seeming messy.
+        <div className="section-container-4xl relative">
+          <h2 className="section-heading-3xl">About Perfectionism</h2>
+          <p className="body-text-dark mt-6">
+            Contrary to common belief, perfectionism doesn&rsquo;t help us
+            achieve our goals. It keeps us small, distracted by the fear of
+            making a mistake or seeming messy.
           </p>
 
           <div className="mt-8">
@@ -153,14 +142,8 @@ export default function Services() {
                 "Chronic stress and burnout",
                 "Frequent and intense anxiety of being perceived negatively",
               ].map((item) => (
-                <li
-                  key={item}
-                  className="flex items-center gap-2 rounded-md px-2 py-1.5 transition-colors duration-200 hover:bg-neutral-50"
-                >
-                  <span
-                    aria-hidden="true"
-                    className="mt-1.5 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand-teal"
-                  />
+                <li key={item} className="list-item-hover">
+                  <span aria-hidden="true" className="bullet-dot" />
                   {item}
                 </li>
               ))}
@@ -174,11 +157,11 @@ export default function Services() {
 
           {/* Brene Brown Quote */}
           <blockquote className="mt-10 rounded-lg border-l-4 border-brand-teal bg-brand-teal/5 px-6 py-6 transition-colors duration-200 hover:border-brand-purple sm:px-8 sm:py-8">
-            <p className="text-base leading-relaxed text-neutral-700 italic sm:text-lg sm:leading-relaxed">
+            <p className="body-text-dark italic">
               &ldquo;Perfectionism is a self-destructive and addictive belief
               system that fuels this primary thought: If I look perfect and do
-              everything perfectly, I can avoid or minimize the painful feelings of
-              shame, judgement, or blame.&rdquo;
+              everything perfectly, I can avoid or minimize the painful feelings
+              of shame, judgement, or blame.&rdquo;
             </p>
             <footer className="mt-4">
               <cite className="text-sm font-medium text-brand-teal-dark not-italic sm:text-base">

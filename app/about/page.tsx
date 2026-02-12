@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GraduationCap, BookOpen, Heart, User } from "lucide-react";
 import { LeafMotif } from "@/components/decorative/leaf-motif";
+import { InstrumentMotif } from "@/components/decorative/instrument-motif";
 
 export const metadata: Metadata = {
   title: "About | Rachel Siegel, MSW",
@@ -12,15 +13,12 @@ export default function About() {
   return (
     <div className="py-16 sm:py-20 lg:py-24">
       {/* Hero / Introduction */}
-      <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section className="section-container-6xl">
         <div className="grid items-start gap-10 lg:grid-cols-3 lg:gap-14">
           {/* Headshot Placeholder */}
           <div className="flex justify-center lg:col-span-1">
             <div className="flex aspect-[4/5] w-full max-w-xs flex-col items-center justify-center rounded-lg border-2 border-dashed border-neutral-300 bg-neutral-100">
-              <User
-                className="mb-3 size-16 text-neutral-400"
-                strokeWidth={1}
-              />
+              <User className="mb-3 size-16 text-neutral-400" strokeWidth={1} />
               <span className="text-sm font-medium text-neutral-500">
                 Professional Headshot
               </span>
@@ -36,12 +34,12 @@ export default function About() {
 
             <blockquote className="mt-6 border-l-4 border-brand-teal pl-4 text-lg leading-relaxed text-neutral-700 italic transition-colors duration-200 hover:border-brand-purple sm:text-xl">
               &ldquo;I believe that every person holds the power to transform
-              their own lives. It is my privilege to walk with my clients on that
-              journey, combining empathetic connection with evidence-based
+              their own lives. It is my privilege to walk with my clients on
+              that journey, combining empathetic connection with evidence-based
               strategies.&rdquo;
             </blockquote>
 
-            <p className="mt-6 text-base leading-relaxed text-neutral-600 sm:text-lg">
+            <p className="body-text mt-6">
               I specialize in working with individuals navigating anxiety,
               depression, perfectionism, imposter syndrome, identity
               development, work-life balance, and eating and body image
@@ -52,13 +50,21 @@ export default function About() {
       </section>
 
       {/* Marine Band Narrative */}
-      <section className="mt-16 sm:mt-20 lg:mt-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section className="section-spacing relative overflow-hidden">
+        {/* Clarinet motif — Rachel's Marine Band career */}
+        <InstrumentMotif
+          variant="clarinet"
+          className="absolute -right-12 top-8 hidden lg:block"
+          size={320}
+          opacity={0.04}
+        />
+
+        <div className="section-container-6xl relative">
           <h2 className="text-2xl font-bold text-brand-purple sm:text-3xl">
             From the Stage to the Therapy Room
           </h2>
 
-          <div className="mt-6 space-y-5 text-base leading-relaxed text-neutral-600 sm:text-lg">
+          <div className="body-text mt-6 space-y-5">
             <p>
               Before becoming a therapist, I served as a clarinetist for
               &ldquo;The President&rsquo;s Own&rdquo; United States Marine Band.
@@ -85,7 +91,7 @@ export default function About() {
       </section>
 
       {/* Therapy Approach */}
-      <section className="relative mt-16 overflow-hidden bg-neutral-50 py-16 sm:mt-20 sm:py-20 lg:mt-24 lg:py-24">
+      <section className="section-spacing relative overflow-hidden bg-neutral-50 py-16 sm:py-20 lg:py-24">
         {/* Nature decorative element */}
         <LeafMotif
           variant="leaf"
@@ -94,7 +100,7 @@ export default function About() {
           opacity={0.04}
         />
 
-        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="section-container-6xl relative">
           <div className="flex items-center gap-3">
             <Heart className="size-7 text-brand-teal" strokeWidth={1.5} />
             <h2 className="text-2xl font-bold text-brand-purple sm:text-3xl">
@@ -102,7 +108,7 @@ export default function About() {
             </h2>
           </div>
 
-          <div className="mt-6 space-y-5 text-base leading-relaxed text-neutral-600 sm:text-lg">
+          <div className="body-text mt-6 space-y-5">
             <p>
               In my therapy room, I am committed to creating a safe,
               nonjudgmental environment where you can explore your experiences
@@ -122,8 +128,16 @@ export default function About() {
       </section>
 
       {/* Education & Credentials */}
-      <section className="mt-16 sm:mt-20 lg:mt-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section className="section-spacing relative overflow-hidden">
+        {/* Fern motif — growth and learning */}
+        <LeafMotif
+          variant="fern"
+          className="absolute -right-16 top-8 hidden lg:block"
+          size={340}
+          opacity={0.04}
+        />
+
+        <div className="section-container-6xl relative">
           <div className="flex items-center gap-3">
             <GraduationCap
               className="size-7 text-brand-blue"
@@ -173,8 +187,8 @@ export default function About() {
       </section>
 
       {/* Specialized Training */}
-      <section className="mt-16 pb-16 sm:mt-20 sm:pb-20 lg:mt-24 lg:pb-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section className="section-spacing pb-16 sm:pb-20 lg:pb-24">
+        <div className="section-container-6xl">
           <div className="flex items-center gap-3">
             <BookOpen className="size-7 text-brand-teal" strokeWidth={1.5} />
             <h2 className="text-2xl font-bold text-brand-purple sm:text-3xl">

@@ -126,3 +126,214 @@ h2,
 h3 {
   font-family: var(--font-heading);
 }
+
+/* ============================================================================
+ * Custom Utilities & Component Classes
+ * ============================================================================
+ * Reusable patterns extracted from repeated class strings across pages.
+ * - @utility: simple patterns that work with Tailwind variants (hover:, lg:, etc.)
+ * - @layer components: complex multi-property patterns with built-in responsive behavior
+ *
+ * Pages and layout components have been refactored to use these utilities (Story 2).
+ * ============================================================================ */
+
+/* ---------------------------------------------------------------------------
+ * Simple Utilities
+ * --------------------------------------------------------------------------- */
+
+/* Responsive top margin between major page sections.
+ * Replaces: mt-16 sm:mt-20 lg:mt-24 */
+@utility section-spacing {
+  margin-top: 4rem;
+  @variant sm {
+    margin-top: 5rem;
+  }
+  @variant lg {
+    margin-top: 6rem;
+  }
+}
+
+/* Small teal dot used as a bullet marker in lists.
+ * Replaces: mt-1.5 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand-teal */
+@utility bullet-dot {
+  display: block;
+  margin-top: 0.375rem;
+  height: 0.375rem;
+  width: 0.375rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  background-color: var(--color-brand-teal);
+}
+
+/* ---------------------------------------------------------------------------
+ * Layout Components
+ * --------------------------------------------------------------------------- */
+
+@layer components {
+  /* Full-padding section container (max-width 56rem / 4xl).
+   * Replaces: mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 */
+  .section-container-4xl {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 56rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    @variant sm {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    @variant lg {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  /* Horizontal-padding section container (max-width 72rem / 6xl).
+   * Replaces: mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 */
+  .section-container-6xl {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 72rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @variant sm {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    @variant lg {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  /* Centered narrow content container (max-width 48rem / 3xl).
+   * Replaces: mx-auto max-w-3xl text-center */
+  .section-container-3xl-center {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 48rem;
+    text-align: center;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * Typography Components
+ * --------------------------------------------------------------------------- */
+
+@layer components {
+  /* Page-level title (h1).
+   * Replaces: text-4xl font-bold tracking-tight text-brand-purple sm:text-5xl */
+  .page-title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--color-brand-purple);
+    @variant sm {
+      font-size: 3rem;
+      line-height: 1;
+    }
+  }
+
+  /* Major section heading (h2).
+   * Replaces: text-3xl font-semibold text-brand-purple sm:text-4xl */
+  .section-heading-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    color: var(--color-brand-purple);
+    @variant sm {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  /* Minor section heading (h2/h3).
+   * Replaces: text-2xl font-semibold text-brand-purple sm:text-3xl */
+  .section-heading-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: var(--color-brand-purple);
+    @variant sm {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    }
+  }
+
+  /* Standard body text (lighter variant).
+   * Replaces: text-base leading-relaxed text-neutral-600 sm:text-lg sm:leading-relaxed */
+  .body-text {
+    font-size: 1rem;
+    line-height: 1.625;
+    color: var(--color-neutral-600);
+    @variant sm {
+      font-size: 1.125rem;
+      line-height: 1.625;
+    }
+  }
+
+  /* Darker body text variant.
+   * Replaces: text-base leading-relaxed text-neutral-700 sm:text-lg sm:leading-relaxed */
+  .body-text-dark {
+    font-size: 1rem;
+    line-height: 1.625;
+    color: var(--color-neutral-700);
+    @variant sm {
+      font-size: 1.125rem;
+      line-height: 1.625;
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * Component Patterns
+ * --------------------------------------------------------------------------- */
+
+@layer components {
+  /* Interactive list item with hover highlight.
+   * Replaces: flex items-center gap-2 rounded-md px-2 py-1.5 transition-colors duration-200 hover:bg-neutral-50 */
+  .list-item-hover {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.375rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    transition-property:
+      color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+    &:hover {
+      background-color: var(--color-neutral-50);
+    }
+  }
+
+  /* Card with border, shadow, and hover elevation.
+   * Replaces: rounded-lg border border-border bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-8 */
+  .card {
+    border-radius: var(--radius-lg);
+    border-width: 1px;
+    border-color: var(--color-border);
+    background-color: white;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition-property: box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+    &:hover {
+      box-shadow: var(--shadow-md);
+    }
+    @variant sm {
+      padding: 2rem;
+    }
+  }
+}

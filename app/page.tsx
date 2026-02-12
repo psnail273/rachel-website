@@ -63,9 +63,7 @@ export default function Home() {
             </p>
 
             {/* Name */}
-            <h1 className="mt-3 text-4xl font-bold tracking-tight text-brand-purple sm:text-5xl md:text-6xl">
-              Rachel Siegel, MSW
-            </h1>
+            <h1 className="page-title mt-3 md:text-6xl">Rachel Siegel, MSW</h1>
 
             {/* Tagline */}
             <p className="mt-5 text-lg leading-relaxed text-neutral-700 sm:mt-6 sm:text-xl md:text-2xl md:leading-relaxed">
@@ -74,14 +72,14 @@ export default function Home() {
             </p>
 
             {/* Introduction */}
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-neutral-600 sm:mt-8 sm:text-lg sm:leading-relaxed">
+            <p className="body-text mt-6 max-w-xl sm:mt-8">
               As a former clarinetist for &ldquo;The President&rsquo;s
               Own&rdquo; United States Marine Band, I understand the unique
               pressures of performing at the highest level. That lived
               experience led me to become a therapist, so I could help
               performing artists and high achievers navigate perfectionism,
-              anxiety, and burnout with the same dedication they bring to
-              their craft.
+              anxiety, and burnout with the same dedication they bring to their
+              craft.
             </p>
 
             {/* CTA */}
@@ -109,18 +107,17 @@ export default function Home() {
       </section>
 
       {/* Brief value proposition / bridge section */}
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl font-semibold text-brand-purple sm:text-3xl">
+      <section className="section-container-6xl py-16 sm:py-20 lg:py-24">
+        <div className="section-container-3xl-center">
+          <h2 className="section-heading-2xl">
             Therapy Grounded in Understanding
           </h2>
-          <p className="mt-6 text-base leading-relaxed text-neutral-600 sm:text-lg sm:leading-relaxed">
-            I know what it is like to pour everything into your art and
-            wonder if there is room left for the rest of your life. Whether
-            you are a performing artist, a driven professional, or someone
-            striving for balance, I offer a compassionate space where your
-            strengths are honored and your challenges are met with
-            genuine understanding.
+          <p className="body-text mt-6">
+            I know what it is like to pour everything into your art and wonder
+            if there is room left for the rest of your life. Whether you are a
+            performing artist, a driven professional, or someone striving for
+            balance, I offer a compassionate space where your strengths are
+            honored and your challenges are met with genuine understanding.
           </p>
           <div className="mt-8 flex justify-center gap-4 sm:mt-10">
             <Button asChild size="lg" className="h-12 px-8 text-base">
