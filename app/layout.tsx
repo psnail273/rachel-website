@@ -5,6 +5,7 @@ import "./globals.css";
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import DevModeBanner from "@/components/devBanner/devBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -62,6 +63,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${lora.variable} flex min-h-screen flex-col antialiased`}
       >
+        <DevModeBanner />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

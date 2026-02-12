@@ -132,8 +132,8 @@ export default function About() {
         {/* Fern motif — growth and learning */}
         <LeafMotif
           variant="fern"
-          className="absolute -right-16 top-8 hidden lg:block"
-          size={340}
+          className="absolute right-4 top-1/2 -translate-y-1/2 hidden lg:block"
+          size={180}
           opacity={0.04}
         />
 

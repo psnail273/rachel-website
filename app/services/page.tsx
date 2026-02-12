@@ -12,7 +12,7 @@ export default function Services() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-linear-to-b from-brand-purple/5 to-transparent">
+      <section className="bg-gradient-to-b from-brand-purple/5 to-transparent">
         <div className="mx-auto max-w-4xl px-4 pb-12 pt-16 sm:px-6 sm:pb-16 sm:pt-20 lg:px-8">
           <h1 className="page-title">Services</h1>
           <p className="mt-4 text-lg text-neutral-600 sm:text-xl">

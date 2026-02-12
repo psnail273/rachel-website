@@ -103,7 +103,7 @@ export default function Contact() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-linear-to-br from-neutral-50 via-brand-purple/5 to-brand-teal/10 px-4 pb-12 pt-16 sm:px-6 sm:pb-16 sm:pt-20 lg:px-8">
+      <section className="bg-gradient-to-br from-neutral-50 via-brand-purple/5 to-brand-teal/10 px-4 pb-12 pt-16 sm:px-6 sm:pb-16 sm:pt-20 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="page-title">Contact</h1>
           <p className="mt-4 text-lg leading-relaxed text-neutral-600 sm:text-xl">
